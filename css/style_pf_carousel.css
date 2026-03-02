@@ -1,0 +1,444 @@
+/* PF CAROUSEL */
+
+.pf-carousel {
+  height: auto !important;
+  min-height: 130vh;
+  overflow: visible !important;
+  background: #8e8b83;
+  padding: 80px 0;
+}
+
+.pf-scene {
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh;
+  position: relative !important;
+  overflow: visible !important;
+  perspective: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Scene Title */
+.pf-scene__title {
+  display: block;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 3.5vw;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.pf-scene__title:before {
+  content: "제목을 눌러보세요";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  font-size: 1.5vw;
+  color: #222;
+  background: #e8e2c6;
+  transition: width 0.2s;
+  z-index: -1;
+}
+
+.pf-scene__title:hover {
+  color: #ddd;
+  transform: translateY(-2px);
+}
+
+.pf-scene__title span {
+  display: inline-block;
+}
+
+/* Carousel Wrapper */
+.pf-carousel-body {
+  width: 420px;
+  height: 520px;
+  position: relative;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+  transform: translateZ(-550px) rotateY(0deg);
+  will-change: transform;
+}
+
+.pf-carousel__cell {
+  position: absolute;
+  width: 340px;
+  height: 440px;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+}
+
+/* pf-card */
+.pf-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pf-card__face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+}
+
+.pf-card__face--back {
+  transform: rotateY(180deg);
+}
+
+/* Preview Popup */
+.pf-preview-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 12vw;
+  overflow-y: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pf-preview {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  background: #53524d;
+  padding: 2%;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.pop {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+/* Header */
+.pf-preview__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pf-preview__title span {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.pf-preview__close {
+  cursor: pointer;
+  font-size: 0.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+/* Preview Layout */
+.pf-preview .grid__item {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  flex: 1;
+  min-height: 0;
+}
+
+.pf-preview .infoCard {
+  width: 50%;
+  color: #fff;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.pf-preview .infoCard__item-image {
+  width: 90%;
+  height: 70%;
+  background-size: contain;
+  background-position: center;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+}
+
+.pf-preview .grid_info_inner {
+  width: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.pf-preview .inner-img {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 이미지 영역 */
+.pf-preview .card_preview {
+  width: 50%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pf-preview .card_preview img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.pf-preview .card_preview .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.pf-preview .card_preview .image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 오버레이 */
+.pf-preview .card_preview .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.pf-preview .card_preview .image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+/* 버튼 컨테이너 */
+.pf-preview .card_preview .overlay-buttons {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+/* 버튼 공통 스타일 */
+.pf-preview .card_preview .overlay-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: #fff;
+  color: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 2vw;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* 버튼 hover 효과 */
+.pf-preview .card_preview .overlay-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 아이콘 크기 */
+.pf-preview .card_preview .overlay-buttons a i {
+  font-size: 2vw;
+}
+
+/* pf-carousel2 */
+.pf-carousel2 ul {
+  width: 100%;
+}
+.pf-carousel2 ul li {
+  width: calc(100% / 3);
+}
+/*grid_info_word*/
+.grid_info_word h4 {
+  margin-bottom: 5px;
+}
+.grid_info_word p {
+  font-size: 2.2vw;
+  word-break: keep-all;
+}
+@media (max-width: 600px) {
+  .pf-preview .grid__item {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px;
+    flex: 1;
+    min-height: 0;
+  }
+  /* Preview Popup */
+  .pf-preview-wrapper {
+    padding: 0 2vw;
+    align-items: center;
+    overflow-y: auto !important;
+  }
+
+  .pf-preview {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  /* 내부 레이아웃 세로로 전환 */
+  .pf-preview .grid__item {
+    flex-direction: column !important;
+  }
+
+  .pf-preview .infoCard,
+  .pf-preview .card_preview {
+    width: 100%;
+  }
+  .infoCard__item-image {
+    display: none;
+  }
+
+  .pf-preview__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .pf-preview__header span {
+    display: block;
+    font-size: 4vw;
+  }
+  .grid_info_word h4 {
+    margin-bottom: 5px;
+  }
+  .grid_info_word p {
+    font-size: 3vw;
+    word-break: keep-all;
+  }
+  .pf-scene__title {
+    display: block;
+    position: relative;
+    z-index: 20;
+    cursor: pointer;
+    font-size: 6vw;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .pf-scene__title:before {
+    content: "제목을 눌러보세요";
+    display: block;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    font-size: 4vw;
+    color: #222;
+    background: #e8e2c6;
+    transition: width 0.2s;
+    z-index: -1;
+  }
+
+  .pf-carousel-body {
+    width: 420px;
+    height: 520px;
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    transform: translateZ(-250px) rotateY(0deg);
+    will-change: transform;
+  }
+
+  .pf-preview .card_preview .image-wrapper img {
+    max-height: 350px;
+  }
+
+  .pf-preview .card_preview .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  .pf-preview .card_preview .overlay-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  .pf-preview .card_preview .overlay-buttons a i {
+    font-size: 4vw;
+  }
+}
