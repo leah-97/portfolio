@@ -318,6 +318,28 @@
   word-break: keep-all;
 }
 @media (max-width: 600px) {
+  .pf-carousel {
+    height: auto !important;
+    min-height: 130dvh;
+    overflow: visible !important;
+    background: #8e8b83;
+    padding: 80px 0;
+  }
+
+  .pf-scene {
+    width: 100%;
+    height: auto !important;
+    min-height: 100dvh;
+    position: relative !important;
+    overflow: visible !important;
+    perspective: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
   .pf-preview .grid__item {
     display: flex !important;
     flex-direction: row !important;

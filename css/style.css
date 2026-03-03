@@ -2789,7 +2789,7 @@ html {
     position: absolute;
     z-index: 30;
     right: -15%;
-    bottom: 0;
+    bottom: 5%;
     width: 180px;
     height: 100px;
   }
@@ -2810,6 +2810,7 @@ html {
     position: relative;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    height: 40dvh;
     background: url("../img/back.png") no-repeat center / cover;
   }
   .box1 .clip {
@@ -2826,6 +2827,7 @@ html {
     background: url("../img/back.png") no-repeat center / cover;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    height: 40dvh;
     display: flex !important;
     flex-direction: column !important;
     padding: 0 !important;
@@ -2867,7 +2869,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #f3867e;
     transition: width 0.2s;
     z-index: -1;
@@ -2885,7 +2887,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #8bb0ff;
     transition: width 0.2s;
     z-index: -1;
@@ -2903,7 +2905,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #57ff81;
     transition: width 0.2s;
     z-index: -1;
@@ -2921,7 +2923,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #fff679;
     transition: width 0.2s;
     z-index: -1;
@@ -2939,7 +2941,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #b38aff;
     transition: width 0.2s;
     z-index: -1;
@@ -2957,7 +2959,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #ff9bcd;
     transition: width 0.2s;
     z-index: -1;
@@ -2975,7 +2977,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: #ff985d;
     transition: width 0.2s;
     z-index: -1;
@@ -2994,6 +2996,7 @@ html {
   .box3 {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
+    height: 40dvh;
     display: flex !important;
     overflow: hidden;
     position: relative;
@@ -3034,6 +3037,7 @@ html {
   .box4 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    height: 40dvh;
     display: flex !important;
     flex-direction: column !important;
     position: relative;
@@ -3110,7 +3114,7 @@ html {
   }
   .inner {
     width: 98%;
-    height: 100%;
+    height: 95dvh;
     background: url("../img/inner.svg") no-repeat;
     background-position: right;
     background-size: cover;
@@ -3124,11 +3128,12 @@ html {
     width: 100%;
     height: 100dvh;
     overflow: hidden;
+    background-color: #8e8b83;
   }
 
   .next section {
     width: 100vw;
-    height: 100dvh;
+    height: 98dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
@@ -3151,7 +3156,7 @@ html {
   .next .conWrap1 {
     position: relative;
     width: 80%;
-    height: 90%;
+    height: 98dvh;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -3169,7 +3174,7 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 49%;
+    height: 48dvh;
     padding: 1%;
     justify-content: space-between;
     box-sizing: border-box;
@@ -3178,13 +3183,13 @@ html {
     display: flex;
     flex-direction: column;
     padding: 1%;
-    height: 100%;
+    height: 24dvh;
     width: 100%;
     gap: 5px;
     box-sizing: border-box;
   }
   .innerTop {
-    height: 100%;
+    height: 24dvh;
     background-color: #fbe9d6;
     padding: 2%;
     box-sizing: border-box;
@@ -3218,7 +3223,7 @@ html {
   .conwarpInner1 .show,
   .conwarpInner2 .show {
     width: 100%;
-    height: 100%;
+    height: 24dvh;
     overflow: hidden;
     background-color: #222;
   }
@@ -3233,7 +3238,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 49%;
+    height: 48dvh;
     padding: 1%;
     gap: 5px;
     box-sizing: border-box;
@@ -3245,6 +3250,7 @@ html {
     width: 100%;
     background-color: #fbe9d6;
     position: relative;
+    height: 24dvh;
   }
 
   .innerBottom .tape {
@@ -3339,7 +3345,7 @@ html {
   .conWrap2 {
     position: relative;
     width: 80%;
-    height: 100vh;
+    height: 98dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3349,7 +3355,7 @@ html {
   .conTop,
   .conBottom {
     width: 100%;
-    height: 25vh;
+    height: 20dvh;
     display: flex;
     flex: 1;
     position: relative;
@@ -3419,7 +3425,6 @@ html {
   .curtain {
     width: 100%;
     height: calc(50% - 2%);
-    min-height: 350px;
     --curtain-opacity: 1;
     overflow: hidden;
     position: relative;
@@ -3583,7 +3588,7 @@ html {
   /*next page 3 -conwrap3*/
   .conWrap3 {
     width: 80%;
-    height: 90%;
+    height: 98dvh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -3617,15 +3622,15 @@ html {
     padding: 1%;
   }
   .conWrap3 .conLeft {
-    height: 40%;
+    height: 38dvh;
   }
   .conWrap3 .conRight {
-    height: 60%;
+    height: 60dvh;
   }
 
   /*conLeft*/
   .conLeft .leftWrap {
-    height: auto;
+    height: 38dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3634,7 +3639,9 @@ html {
   .conLeft .leftWrap > h4 {
     font-size: 2vw;
   }
-
+  .leftWrap .word {
+    height: 16dvh;
+  }
   .word span {
     font-size: 4vw;
     font-style: italic;
@@ -3647,6 +3654,7 @@ html {
   }
   .leftWrap .mid {
     width: 100%;
+    height: 20dvh;
   }
   .mid .title {
     display: flex;
@@ -3663,10 +3671,11 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 38dvh;
   }
   .shop {
     width: 100%;
-    height: calc(100% - 80px);
+    height: 40dvh;
     position: relative;
     background-color: #b38aff;
   }
@@ -3746,16 +3755,15 @@ html {
   }
   .artWrap ul {
     width: 90%;
-    height: 90%;
+    height: 80dvh;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     gap: 5px;
-    justify-content: space-between;
   }
   .artWrap ul li {
     width: calc(100% / 2 - 5px);
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
