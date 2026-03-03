@@ -2687,7 +2687,7 @@ html {
 @media (max-width: 600px) {
   section {
     width: 100%;
-    height: 120dvh;
+    height: 100dvh;
     overflow: hidden;
     box-sizing: border-box;
   }
@@ -2696,7 +2696,7 @@ html {
   }
   /*section page1*/
   .start {
-    height: 120dvh;
+    height: 100dvh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2744,14 +2744,14 @@ html {
     left: 0;
     z-index: 10;
     width: 100%;
-    height: 120dvh;
+    height: 100dvh;
     opacity: 0;
     --brandBgMask: 40% 40% 40% 40%;
     clip-path: inset(var(--brandBgMask));
     display: flex;
     align-items: center;
     justify-content: center;
-    scale: calc(0.8);
+    scale: calc(0.6);
     padding: 1%;
     box-sizing: border-box;
   }
@@ -3122,13 +3122,13 @@ html {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    height: 120dvh;
+    height: 100dvh;
     overflow: hidden;
   }
 
   .next section {
     width: 100vw;
-    height: 120dvh;
+    height: 100dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
