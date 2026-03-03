@@ -2758,7 +2758,7 @@ html {
 
   .inforWrap {
     width: 82%;
-    min-height: 90dvh;
+    min-height: 100dvh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3133,7 +3133,7 @@ html {
 
   .next section {
     width: 100vw;
-    height: 98dvh;
+    height: 100dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
@@ -3156,7 +3156,7 @@ html {
   .next .conWrap1 {
     position: relative;
     width: 80%;
-    height: 98dvh;
+    height: 100dvh;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -3255,8 +3255,8 @@ html {
 
   .innerBottom .tape {
     position: absolute;
-    top: -30px;
-    left: 50%;
+    top: -45px;
+    left: 80%;
     transform: translateX(-50%);
     background: url("../img/tape.svg") no-repeat center / contain;
   }
