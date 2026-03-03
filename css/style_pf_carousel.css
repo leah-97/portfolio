@@ -151,7 +151,7 @@
 }
 
 .pf-preview__title span {
-  font-size: 3vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 
@@ -284,7 +284,7 @@
   color: #222;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -311,10 +311,11 @@
 }
 /*grid_info_word*/
 .grid_info_word h4 {
+  font-size: 1.2vw;
   margin-bottom: 5px;
 }
 .grid_info_word p {
-  font-size: 2.2vw;
+  font-size: 0.8vw;
   word-break: keep-all;
 }
 @media (max-width: 600px) {
