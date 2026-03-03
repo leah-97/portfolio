@@ -2687,7 +2687,7 @@ html {
 @media (max-width: 600px) {
   section {
     width: 100%;
-    height: 100dvh;
+    height: 120dvh;
     overflow: hidden;
     box-sizing: border-box;
   }
@@ -2696,7 +2696,7 @@ html {
   }
   /*section page1*/
   .start {
-    height: 100dvh;
+    height: 120dvh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2744,7 +2744,7 @@ html {
     left: 0;
     z-index: 10;
     width: 100%;
-    height: 100dvh;
+    height: 120dvh;
     opacity: 0;
     --brandBgMask: 40% 40% 40% 40%;
     clip-path: inset(var(--brandBgMask));
@@ -3122,13 +3122,13 @@ html {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    height: 100dvh;
+    height: 120dvh;
     overflow: hidden;
   }
 
   .next section {
     width: 100vw;
-    height: 100dvh;
+    height: 120dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
