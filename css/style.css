@@ -2696,6 +2696,7 @@ html {
   }
   /*section page1*/
   .start {
+    height: 100dvh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2757,7 +2758,7 @@ html {
 
   .inforWrap {
     width: 82%;
-    min-height: 100dvh;
+    min-height: 90dvh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3127,7 +3128,7 @@ html {
 
   .next section {
     width: 100vw;
-    min-height: 100dvh;
+    height: 100dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
@@ -3355,8 +3356,8 @@ html {
   }
 
   .conTop .fool {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     left: 5%;
     top: 0;
