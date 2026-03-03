@@ -48,8 +48,6 @@ html {
     fill: #000;
     stroke: none;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    animation: reveal 1s ease-out forwards;
-    animation-delay: calc(var(--order) * 0.3s);
   }
 
   @keyframes reveal {
@@ -1361,8 +1359,6 @@ html {
     fill: #000;
     stroke: none;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    animation: reveal 1s ease-out forwards;
-    animation-delay: calc(var(--order) * 0.3s);
   }
 
   @keyframes reveal {
@@ -2722,8 +2718,6 @@ html {
     fill: #000;
     stroke: none;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    animation: reveal 1s ease-out forwards;
-    animation-delay: calc(var(--order) * 0.3s);
   }
 
   @keyframes reveal {
@@ -2763,7 +2757,7 @@ html {
 
   .inforWrap {
     width: 82%;
-    height: 90dvh;
+    min-height: 100dvh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3133,7 +3127,7 @@ html {
 
   .next section {
     width: 100vw;
-    height: 100dvh;
+    min-height: 100dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;
