@@ -3710,7 +3710,7 @@ html {
   .Art {
     clip-path: inset(0% 0% 0% 0%);
     width: 100%;
-    min-height: 100vh;
+    height: 100dvh;
     position: relative;
     background-color: #8e8b83;
     display: flex;
@@ -3718,6 +3718,7 @@ html {
     justify-content: center;
     position: relative;
     z-index: 2;
+    overflow: hidden;
   }
   .Art .inner2 {
     position: absolute;
