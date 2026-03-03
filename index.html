@@ -875,7 +875,7 @@
     <script src="js/index.js"></script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
-
+      ScrollTrigger.normalizeScroll(true);
       const mainTl = gsap.timeline({
         scrollTrigger: {
           trigger: ".start",
