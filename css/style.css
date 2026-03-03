@@ -2758,7 +2758,7 @@ html {
 
   .inforWrap {
     width: 82%;
-    min-height: 90dvh;
+    max-height: 90dvh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
