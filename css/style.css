@@ -2763,7 +2763,7 @@ html {
 
   .inforWrap {
     width: 82%;
-    height: 90%;
+    height: 90dvh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3133,7 +3133,7 @@ html {
 
   .next section {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     flex-shrink: 0;
     background: #8e8b83;
     padding: 0;

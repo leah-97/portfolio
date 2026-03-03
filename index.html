@@ -134,10 +134,10 @@
               <img src="img/phone4.png" alt="핸드폰" />
               <div class="phoneWrap">
                 <div class="tp">
-                  <span>Number:</span> <span class="num">010-8401-5750</span>
+                  <span>Number :</span> <span class="num">010-8401-5750</span>
                 </div>
                 <div class="tp">
-                  <span>E-mail:</span>
+                  <span>E-mail :</span>
                   <span class="mail">leah_97@naver.com</span>
                 </div>
               </div>
@@ -150,7 +150,6 @@
         </div>
       </section>
       <div class="work">
-        <!--캐러셀-->
         <section class="pf-carousel">
           <div class="pf-scene-wrapper">
             <div class="pf-scene">
@@ -569,7 +568,6 @@
               </div>
               <div class="conRight">
                 <img src="img/tape.svg" alt="테이프" />
-                <!--페이지-->
                 <div class="shop">
                   <div class="ndivBtn">
                     <a href="#" class="planning">
@@ -648,7 +646,6 @@
                   <div class="image-wrapper">
                     <img src="img/cwindex.png" />
 
-                    <!-- hover 시 나타나는 오버레이 -->
                     <div class="image-overlay">
                       <div class="overlay-buttons">
                         <a href="#" class="btn-planning">
@@ -670,7 +667,6 @@
             </div>
           </div>
 
-          <!-- Preview 2 - 독립적인 wrapper -->
           <div class="pf-preview-wrapper" id="pf-preview-wrapper-2">
             <div class="pf-preview custom-preview" id="pf-preview-2">
               <header class="pf-preview__header">
@@ -722,16 +718,8 @@
                   <div class="image-wrapper">
                     <img src="img/cl1.png" />
 
-                    <!-- hover 시 나타나는 오버레이 -->
                     <div class="image-overlay">
                       <div class="overlay-buttons">
-                        <!-- <a
-                          href="https://leah-97.github.io/cl1/"
-                          class="btn-planning"
-                        >
-                          <i class="fas fa-file-alt"></i>
-                          <span>기획안 보기</span>
-                        </a> -->
                         <a
                           href="https://leah-97.github.io/cl1/"
                           class="btn-visit"
@@ -747,7 +735,6 @@
             </div>
           </div>
 
-          <!-- Preview 3 - 독립적인 wrapper -->
           <div class="pf-preview-wrapper" id="pf-preview-wrapper-3">
             <div class="pf-preview custom-preview" id="pf-preview-3">
               <header class="pf-preview__header">
@@ -799,13 +786,8 @@
                   <div class="image-wrapper">
                     <img src="img/cl2.png" alt="클립" />
 
-                    <!-- hover 시 나타나는 오버레이 -->
                     <div class="image-overlay">
                       <div class="overlay-buttons">
-                        <!-- <a href="#" class="btn-planning">
-                          <i class="fas fa-file-alt"></i>
-                          <span>기획안 보기</span>
-                        </a> -->
                         <a
                           href="https://leah-97.github.io/cl2/"
                           class="btn-visit"
@@ -1135,14 +1117,11 @@
       import * as THREE from "three";
       import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-      // 📦 3D 모델을 불러오는 기능을 '함수'로 만들어서 재사용합니다.
       function init3D(selector) {
         const container = document.querySelector(selector);
 
-        // 컨테이너가 없으면(오타 났거나 해당 페이지 없으면) 그냥 종료
         if (!container) return;
 
-        // 크기 확인 (디버깅용)
         console.log(
           `${selector} 크기:`,
           container.clientWidth,
@@ -1154,29 +1133,24 @@
           );
         }
 
-        // 1. 장면(Scene) 생성
         const scene = new THREE.Scene();
 
-        // 2. 카메라(Camera) 설정
         const aspectRatio = container.clientWidth / container.clientHeight || 1;
         const camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 1000);
         camera.position.set(0, 0, 5);
 
-        // 3. 렌더러(Renderer) 설정
         const renderer = new THREE.WebGLRenderer({
-          alpha: true, // 배경 투명하게
+          alpha: true,
           antialias: true,
         });
         renderer.setSize(container.clientWidth, container.clientHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        // 캔버스를 CSS로 100% 채우기
         renderer.domElement.style.width = "100%";
         renderer.domElement.style.height = "100%";
 
         container.appendChild(renderer.domElement);
 
-        // 4. 조명(Light) 설정
         const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
         scene.add(ambientLight);
 
@@ -1188,17 +1162,16 @@
         dirLight2.position.set(-5, -5, 5);
         scene.add(dirLight2);
 
-        // 5. 모델 불러오기
         const loader = new GLTFLoader();
         let model;
         const initialRotationY = -1.57;
 
         loader.load(
-          "img/character.glb", // 파일 경로 확인!
+          "img/character.glb",
           function (gltf) {
             model = gltf.scene;
-            model.scale.set(2, 2, 2); // 크기 조절
-            model.position.set(0, 0, 0); // 위치 조절
+            model.scale.set(2, 2, 2);
+            model.position.set(0, 0, 0);
             model.rotation.y = initialRotationY;
             scene.add(model);
           },
@@ -1208,7 +1181,6 @@
           },
         );
 
-        // 6. 마우스 움직임 반응 (각 캔버스별로 따로 돔)
         let mouseX = 0;
         let mouseY = 0;
 
@@ -1218,11 +1190,9 @@
           mouseY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
         });
 
-        // 7. 애니메이션 루프
         function animate() {
           requestAnimationFrame(animate);
           if (model) {
-            // 마우스 따라 고개 돌리기
             model.rotation.y = initialRotationY + mouseX * 0.5;
             model.rotation.x = mouseY * 0.3;
           }
@@ -1230,7 +1200,6 @@
         }
         animate();
 
-        // 8. 리사이즈 대응
         window.addEventListener("resize", () => {
           const width = container.clientWidth;
           const height = container.clientHeight;
