@@ -3114,7 +3114,7 @@ html {
   }
   .inner {
     width: 98%;
-    height: 95dvh;
+    height: 100dvh;
     background: url("../img/inner.svg") no-repeat;
     background-position: right;
     background-size: cover;
