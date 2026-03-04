@@ -2,7 +2,7 @@
 
 .pf-carousel {
   height: auto !important;
-  min-height: 130vh;
+  min-height: 100vh;
   overflow: visible !important;
   background: #8e8b83;
   padding: 80px 0;
@@ -28,7 +28,7 @@
   position: relative;
   z-index: 20;
   cursor: pointer;
-  font-size: 3.5vw;
+  font-size: 3vw;
   font-weight: 600;
   color: #fff;
   text-align: center;
