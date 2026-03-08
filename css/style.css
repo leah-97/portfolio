@@ -578,13 +578,13 @@ html {
     overflow: hidden;
   }
   .conwarpInner1 .show {
-    background-image: url("/img/trip.png");
+    background-image: url("../img/trip.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
   }
   .conwarpInner2 .show {
-    background-image: url("/img/re.png");
+    background-image: url("../img/re.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
